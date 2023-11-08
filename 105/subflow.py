@@ -23,4 +23,7 @@ def animal_facts():
 
 
 if __name__ == "__main__":
-    animal_facts()
+    dep1 = animal_facts.to_deployment(name="animal_facts_2")
+    dep2 = fetch_cat_fact.to_deployment(name="fetch_cat_fact_2")
+    dep3 = fetch_dog_fact.to_deployment(name="fetch_dog_fact_2")
+    serve(dep1, dep2, dep3)
